@@ -95,6 +95,32 @@ public class Job {
     public int getId() {
         return id;
     }
+
+    @Override
+    public String toString() {
+        String replacementString;
+        if (name != ""){
+            replacementString =
+                    "\nID: " + getId() +
+                    "\nName: " + getName() +
+                    "\nEmployer: " + getEmployer() +
+                    "\nLocation: " + getLocation() +
+                    "\nPosition Type: " + getPositionType() +
+                    "\nCore Competency: " + getCoreCompetency() +
+                    "\n";
+        } else {
+            replacementString =
+                    "\nID: " + getId() +
+                    "\nName: " + getName() +
+                    "\nEmployer: " + getEmployer() +
+                    "\nLocation: " + getLocation() +
+                    "\nPosition Type: " + getPositionType() +
+                    "\nCore Competency: " + getCoreCompetency() +
+                    "\n";
+            }
+            return replacementString.replaceAll("null", "Data not available");
+
+    }
 }
 
 
