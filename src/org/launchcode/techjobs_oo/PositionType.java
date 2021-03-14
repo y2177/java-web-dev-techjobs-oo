@@ -40,7 +40,6 @@ public class PositionType {
         return Objects.hash(id);
     }
 
-
     // Getters and Setters:
 
     public int getId() {
